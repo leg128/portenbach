@@ -1,10 +1,20 @@
 from tkinter import *
+#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
 root = Tk()
-root.title("aaaa")
-root.geometry('350x200')
-lbl = Label (root, text= "aaaaaaassd")
-lbl.grid()
-
-lbl = Label (root, text= "aaaaaaassd")
-lbl.grid()
+root.title("Login")
+root.geometry('400x100')
+lbl = Label (root, text= "Usuario")
+lbl.grid(row=15, column=1, padx=20)
+lbl = Label (root, text="Password")
+lbl.grid(row=16, column=1, padx=20)                                                                                                           
+btn = Button(root, text="Aceptar", command = lambda : leertxt(), width=10)
+btn.grid(row=17,column=1, padx=50, pady=10)
+btn = Button(root, text="Cancelar", command = lambda : quit(), width=10)
+btn.grid(row=17,column=2, pady=10)
+txt = Entry(root) 
+txt.grid(row=15, column=2)
+txt1 = Entry(root, show="*") 
+txt1.grid(row=16, column=2)
+def leertxt():
+    print(txt1.get())
 root.mainloop()
